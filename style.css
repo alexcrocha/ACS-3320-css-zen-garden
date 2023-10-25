@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "intro intro sidebar"
+    "supporting supporting supporting";
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.supporting {
+  grid-area: supporting;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "design-selection design-archives"
+    "design-selection zen-resources";
+}
+.design-selection {
+  grid-area: design-selection;
+}
+
+.design-archives {
+  grid-area: design-archives;
+}
+
+.zen-resources {
+  grid-area: zen-resources;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
