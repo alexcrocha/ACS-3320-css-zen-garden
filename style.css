@@ -21,10 +21,12 @@ h2,
 h3 {
   font-weight: 700;
   margin-bottom: 16px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
   font-size: 3rem;
+  font-family: cursive;
 }
 
 h2 {
@@ -49,6 +51,13 @@ li,
 ul {
   list-style: none;
   padding: 0;
+}
+
+[role="navigation"] a,
+ul {
+  font-family:monospace;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:link,
@@ -76,7 +85,10 @@ a:hover {
 
 .intro { grid-area: intro; }
 .supporting { grid-area: supporting; }
-.sidebar { grid-area: sidebar; }
+.sidebar {
+  grid-area: sidebar;
+  font-size: large;
+}
 
 .sidebar .wrapper {
   height: 100%;
@@ -167,16 +179,33 @@ nav[role="navigation"] ul>li>a:last-of-type {
 
 .design-selection li {
   font-size: 0;
+  margin: 5px;
 }
 
 .design-name,
 .designer-name {
-  font-size: initial;
+  font-size: 1rem;
 }
 
 .designer-name::before {
   content: "by ";
-  font-size: initial;
+}
+
+a + .designer-name {
+  font-family: cursive;
+}
+
+.summary {
+  text-align: center;
+}
+.summary p:first-of-type {
+  font-size: 1.5rem;
+  font-family: cursive;
+  margin: 24px 0;
+}
+
+.summary p:last-of-type::before {
+  content: "→ ";
 }
 
 .page-wrapper footer:last-of-type {
